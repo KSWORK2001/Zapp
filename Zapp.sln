@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zapp", "Zapp.csproj", "{F475F2D5-4407-4842-9BC2-196A6EE9AB58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F475F2D5-4407-4842-9BC2-196A6EE9AB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F475F2D5-4407-4842-9BC2-196A6EE9AB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F475F2D5-4407-4842-9BC2-196A6EE9AB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F475F2D5-4407-4842-9BC2-196A6EE9AB58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BAD9B96-69C6-42EE-B363-A73FC5930FE7}
+	EndGlobalSection
+EndGlobal
