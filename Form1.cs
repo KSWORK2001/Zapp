@@ -95,4 +95,39 @@ namespace Zapp
 
         }
     }
+
+    class CustomLifeSpanHandler : ILifeSpanHandler
+    {
+
+        bool ILifeSpanHandler.DoClose(IWebBrowser browserControl, IBrowser browser)
+        {
+            // Implement the logic for the DoClose method here
+            return false; // You can return true or false based on your requirements
+        }
+
+        public bool OnBeforePopup(IWebBrowser browserControl, IBrowser browser, IFrame frame, string targetUrl, string targetFrameName, WindowOpenDisposition targetDisposition, bool userGesture, IPopupFeatures popupFeatures, IWindowInfo windowInfo, IBrowserSettings browserSettings, ref bool noJavascriptAccess, out IWebBrowser newBrowser)
+        {
+            // Check if the pop-up is triggered by a user gesture (e.g., clicking a link)
+            if (userGesture)
+            {
+                // Block pop-ups by canceling the request
+                newBrowser = null;
+                return true;
+            }
+
+            // Allow pop-ups for other cases
+            newBrowser = null;
+            return false;
+        }
+
+        public void OnAfterCreated(IWebBrowser browserControl, IBrowser browser)
+        {
+        }
+
+        void ILifeSpanHandler.OnBeforeClose(IWebBrowser browserControl, IBrowser browser)
+        {
+        }
+
+        // Implement other ILifeSpanHandler methods as needed
+    }
 }
